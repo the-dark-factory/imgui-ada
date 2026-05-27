@@ -5,8 +5,10 @@
 .DS_Store
 obj/
 bin/
+lib/
 build/
 alire/
 .gnatcheck
 config/
 *.exe
+vendor/cimgui/libcimgui.a

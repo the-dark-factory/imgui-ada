@@ -1,0 +1,27 @@
+--  Headless smoke test for ada-imgui.
+--
+--  Builds against the in-tree ada_imgui static archive (lib/) and
+--  the in-tree libcimgui static archive (vendor/cimgui/) produced
+--  by scripts/build-cimgui.sh. Run `gprbuild -P examples/smoke/smoke.gpr`
+--  from the repo root, then ./examples/smoke/bin/smoke.
+
+with "../../ada_imgui.gpr";
+
+project Smoke is
+
+   for Source_Dirs use (".");
+   for Object_Dir use "obj";
+   for Exec_Dir use "bin";
+   for Main use ("smoke.adb");
+
+   package Compiler is
+      for Default_Switches ("ada") use
+        ("-gnatwa", "-gnatVa", "-O0", "-g");
+   end Compiler;
+
+   --  Linker flags propagate from ada_imgui.gpr's Linker_Options
+   --  (cimgui + the macOS C++ runtime setup). Nothing extra needed
+   --  here. If a consumer needs project-specific link flags they
+   --  go in a Linker package alongside this.
+
+end Smoke;

@@ -14,6 +14,23 @@ library project Ada_Imgui is
    for Object_Dir use "obj";
    for Library_Dir use "lib";
 
+   --  Pass these to anyone with-ing this project so the C++ side
+   --  links correctly. cimgui is built by scripts/build-cimgui.sh
+   --  into vendor/cimgui/libcimgui.a.
+   --
+   --  The -syslibroot is macOS-specific (the Alire-shipped gcc
+   --  needs to be told where the Xcode SDK lives). On Linux the
+   --  c++ runtime is found automatically; that branch isn't
+   --  active here yet but will be once cross-platform testing
+   --  lands.
+   package Linker is
+      for Linker_Options use
+        ("-L" & Project'Project_Dir & "vendor/cimgui",
+         "-lcimgui",
+         "-Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
+         "-lc++");
+   end Linker;
+
    package Compiler is
       for Default_Switches ("ada") use
         ("-gnatwa",       --  all warnings
