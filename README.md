@@ -65,3 +65,9 @@ automatically via `Linker_Options`.
 ## License
 
 MIT — matches upstream Dear ImGui and cimgui.
+
+## Thanks
+
+Dedicated to the Ada community who have answered countless
+questions, corrected countless mistakes, and saved countless
+hours of head-scratching over the decades. See [THANKS.md](THANKS.md).
