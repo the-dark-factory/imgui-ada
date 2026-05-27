@@ -12,11 +12,13 @@
 --      --  ... let the renderer backend draw the resulting data ...
 --    Destroy_Context (Ctx);
 --
---  The C-binding surface lives in the private child `Imgui.C`;
---  public packages call into it. Users of this library should
+--  The thin extern "C" surface lives in child package `Imgui.C`.
+--  Public packages call into it. Users of this library should
 --  not need to import `Imgui.C` directly — if you find yourself
 --  reaching for it, the public API is probably missing a binding
---  we should add.
+--  we should add. (The child is currently public for testability;
+--  a future revision may make it private once the public surface
+--  has stabilised.)
 
 with System;
 
@@ -28,9 +30,18 @@ package Imgui is
    --  contexts and swap between them. Most apps create one.
    type Context is private;
 
-   --  A null context — returned by Create_Context on failure (rare;
-   --  the underlying call only fails on allocation pressure).
+   --  Sentinel for a not-yet-created or already-destroyed context.
+   --  Note: cimgui's `igCreateContext` doesn't return NULL in
+   --  practice — it asserts (and aborts) on allocation failure
+   --  rather than gracefully failing. Null_Context is therefore
+   --  most useful as a "no current context" marker before
+   --  Create_Context runs, or after Destroy_Context.
    Null_Context : constant Context;
+
+   --  Test whether a Context handle is null. Avoids forcing
+   --  consumers to write `use type Imgui.Context;` just to
+   --  compare against Null_Context.
+   function Is_Null (Ctx : Context) return Boolean;
 
    --  Create an ImGui context. The optional Shared_Font_Atlas
    --  parameter lets multiple contexts share a font atlas; pass

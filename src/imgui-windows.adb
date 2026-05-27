@@ -5,16 +5,14 @@ with Imgui.C;
 
 package body Imgui.Windows is
 
-   --  Helper: convert an Ada Boolean access to the cimgui Bool_C
-   --  scratch byte. ImGui mutates the value (e.g. when the user
-   --  clicks the [X] button) so we read it back after the call.
-   --
-   --  Returns the scratch storage by aliased access so the
-   --  caller can pass &scratch to cimgui. Caller is responsible
-   --  for syncing scratch back into the Ada Boolean.
-   --
-   --  We can't pass &Boolean directly to C because Ada's Boolean
-   --  isn't guaranteed to be sizeof 1.
+   --  Note on the Boolean ↔ Bool_C dance below:
+   --  We can't pass &Boolean directly to cimgui because Ada's
+   --  Boolean isn't guaranteed to be sizeof 1 (the spec leaves
+   --  it implementation-defined). So when caller passes Is_Open,
+   --  we allocate a local aliased Bool_C, initialise it from
+   --  Is_Open.all, pass &Scratch to cimgui, and sync Scratch back
+   --  into Is_Open.all after the call (cimgui may have set it
+   --  false if the user clicked the window's [X]).
 
    ------------------------
    --  Begin_Window

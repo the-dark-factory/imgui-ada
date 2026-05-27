@@ -1,6 +1,18 @@
+with System;
+
 with Imgui.C;
 
 package body Imgui is
+
+   ------------------------
+   --  Is_Null
+   ------------------------
+
+   function Is_Null (Ctx : Context) return Boolean is
+      use type System.Address;
+   begin
+      return System.Address (Ctx) = System.Null_Address;
+   end Is_Null;
 
    ------------------------
    --  Create_Context
