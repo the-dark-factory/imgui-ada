@@ -52,7 +52,7 @@ Prerequisites:
 - ~/.alire/bin in PATH.
 
 ```
-git clone https://github.com/tonygair/ada-imgui
+git clone https://github.com/the-dark-factory/ada-imgui
 cd ada-imgui
 ./scripts/build-cimgui.sh    # compiles vendor/cimgui/libcimgui.a (~5s on M-series)
 gprbuild -P ada_imgui.gpr    # compiles lib/libada_imgui.a
