@@ -1,0 +1,12 @@
+*.o
+*.ali
+*.dSYM
+*.swp
+.DS_Store
+obj/
+bin/
+build/
+alire/
+.gnatcheck
+config/
+*.exe
