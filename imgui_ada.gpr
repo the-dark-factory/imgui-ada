@@ -1,4 +1,4 @@
---  GPR project file for the ada-imgui bindings.
+--  GPR project file for the imgui-ada bindings.
 --
 --  This file compiles the Ada side of the binding. Linking to
 --  libcimgui is the responsibility of the consuming crate (or
@@ -6,9 +6,9 @@
 --  artefact a static library so the consumer decides how to
 --  pull in the C library.
 
-library project Ada_Imgui is
+library project Imgui_Ada is
 
-   for Library_Name use "ada_imgui";
+   for Library_Name use "imgui_ada";
    for Library_Kind use "static";
    for Source_Dirs use ("src");
    for Object_Dir use "obj";
@@ -40,4 +40,4 @@ library project Ada_Imgui is
          "-g");
    end Compiler;
 
-end Ada_Imgui;
+end Imgui_Ada;

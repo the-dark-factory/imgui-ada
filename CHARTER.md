@@ -1,4 +1,4 @@
-# ada-imgui — charter
+# imgui-ada — charter
 
 Ada bindings to Dear ImGui via cimgui. First entry in the
 bindings line — the pattern this project establishes (factory
@@ -71,12 +71,12 @@ crate metadata; users can override.
 ## Repository layout (planned)
 
 ```
-ada-imgui/
+imgui-ada/
 ├── CHARTER.md           — this
 ├── README.md            — public-facing one-pager
 ├── LICENSE              — MIT
 ├── alire.toml           — crate metadata
-├── ada_imgui.gpr        — GPR build file
+├── imgui_ada.gpr        — GPR build file
 ├── src/
 │   ├── imgui.ads        — top-level package, lifecycle
 │   ├── imgui-widgets.ads — widgets

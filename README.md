@@ -1,4 +1,4 @@
-# ada-imgui
+# imgui-ada
 
 Ada bindings to [Dear ImGui](https://github.com/ocornut/imgui)
 via [cimgui](https://github.com/cimgui/cimgui).
@@ -14,14 +14,14 @@ v0.1.0-dev. End-to-end works on macOS:
 
 ```
 $ ./scripts/build-cimgui.sh           # one-time, builds vendor/cimgui/libcimgui.a
-$ gprbuild -P ada_imgui.gpr           # builds lib/libada_imgui.a
+$ gprbuild -P imgui_ada.gpr           # builds lib/libimgui_ada.a
 $ gprbuild -P examples/smoke/smoke.gpr
 $ ./examples/smoke/bin/smoke
-ada-imgui smoke test starting
+imgui-ada smoke test starting
   Create_Context OK
   Style_Colors_Dark OK
   Destroy_Context OK
-ada-imgui smoke test passed
+imgui-ada smoke test passed
 ```
 
 What works:
@@ -52,13 +52,13 @@ Prerequisites:
 - ~/.alire/bin in PATH.
 
 ```
-git clone https://github.com/the-dark-factory/ada-imgui
-cd ada-imgui
+git clone https://github.com/the-dark-factory/imgui-ada
+cd imgui-ada
 ./scripts/build-cimgui.sh    # compiles vendor/cimgui/libcimgui.a (~5s on M-series)
-gprbuild -P ada_imgui.gpr    # compiles lib/libada_imgui.a
+gprbuild -P imgui_ada.gpr    # compiles lib/libimgui_ada.a
 ```
 
-Consumers `with "ada_imgui.gpr"` from their own GPR — the linker
+Consumers `with "imgui_ada.gpr"` from their own GPR — the linker
 flags (`-lcimgui`, libc++ syslibroot on macOS) propagate
 automatically via `Linker_Options`.
 

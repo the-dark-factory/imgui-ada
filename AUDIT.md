@@ -77,7 +77,7 @@ needs to know.
   public API stabilises (covers everything users actually
   ask for), make this private and force everything through
   the public packages.
-- **Static-only library kind** — `ada_imgui.gpr` builds a
+- **Static-only library kind** — `imgui_ada.gpr` builds a
   static `.a`. Could also produce a dynamic `.dylib` /
   `.so` / `.dll` for users who prefer dynamic linking; left
   as static for now to simplify the macOS bring-up.
