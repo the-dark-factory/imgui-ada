@@ -62,6 +62,37 @@ Consumers `with "imgui_ada.gpr"` from their own GPR — the linker
 flags (`-lcimgui`, libc++ syslibroot on macOS) propagate
 automatically via `Linker_Options`.
 
+## Regenerating the binding
+
+Unlike a pure `-fdump-ada-spec` binding (see e.g. `box2d-ada`), the
+Ada side here is **hand-authored**: `src/` is a small, curated,
+Ada-idiomatic tree (`Imgui` + `Imgui.C` / `Imgui.Types` /
+`Imgui.Windows` / `Imgui.Widgets` / `Imgui.Style`) that wraps a
+deliberately-chosen slice of cimgui's ~1000-function surface. It is
+the authoritative binding and is **not** machine-reproducible — do
+not expect a generator to emit it.
+
+What `scripts/gen.sh` does provide is a **re-vendoring reference**:
+it runs `-fdump-ada-spec` over `vendor/cimgui/cimgui.h` and writes
+the full machine view of the C surface to `gen/` (gitignored):
+
+```sh
+./scripts/gen.sh        # -> gen/cimgui_h.ads (+ its with-closure)
+```
+
+`gen/cimgui_h.ads` is a single flat ~14k-line `cimgui_h` package
+binding every `ig*` symbol with path-based names. When cimgui is
+bumped under `vendor/`, regenerate `gen/` and diff it to see what
+changed in the C API, then hand-port the relevant additions into
+`src/`. `gen/` is scaffolding, never shipped; `src/` is the moat.
+
+Because cimgui.h pulls `<stdio.h>` and the Alire-shipped gcc's
+pre-fixed `<stdio.h>` no longer matches the current macOS SDK
+(`'FILE' does not name a type` — it emits nothing), `gen.sh` uses
+Homebrew **gcc-15** in C++ mode for the fdump step only (override
+with `GEN_GCC`). The Ada still builds with the Alire toolchain.
+`src/` is never touched, so `git diff src/` after a run is empty.
+
 ## License
 
 MIT — matches upstream Dear ImGui and cimgui.

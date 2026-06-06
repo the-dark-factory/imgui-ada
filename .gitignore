@@ -8,6 +8,7 @@ bin/
 lib/
 build/
 alire/
+gen/
 .gnatcheck
 config/
 *.exe
