@@ -6,7 +6,7 @@
 --  artefact a static library so the consumer decides how to
 --  pull in the C library.
 
-library project Imgui_Ada is
+library project Df_Imgui is
 
    for Library_Name use "imgui_ada";
    for Library_Kind use "static";
@@ -40,4 +40,4 @@ library project Imgui_Ada is
          "-g");
    end Compiler;
 
-end Imgui_Ada;
+end Df_Imgui;

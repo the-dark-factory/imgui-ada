@@ -14,7 +14,7 @@ v0.1.0-dev. End-to-end works on macOS:
 
 ```
 $ ./scripts/build-cimgui.sh           # one-time, builds vendor/cimgui/libcimgui.a
-$ gprbuild -P imgui_ada.gpr           # builds lib/libimgui_ada.a
+$ gprbuild -P df_imgui.gpr           # builds lib/libdf_imgui.a
 $ gprbuild -P examples/smoke/smoke.gpr
 $ ./examples/smoke/bin/smoke
 imgui-ada smoke test starting
@@ -55,10 +55,10 @@ Prerequisites:
 git clone https://github.com/the-dark-factory/imgui-ada
 cd imgui-ada
 ./scripts/build-cimgui.sh    # compiles vendor/cimgui/libcimgui.a (~5s on M-series)
-gprbuild -P imgui_ada.gpr    # compiles lib/libimgui_ada.a
+gprbuild -P df_imgui.gpr    # compiles lib/libdf_imgui.a
 ```
 
-Consumers `with "imgui_ada.gpr"` from their own GPR — the linker
+Consumers `with "df_imgui.gpr"` from their own GPR — the linker
 flags (`-lcimgui`, libc++ syslibroot on macOS) propagate
 automatically via `Linker_Options`.
 
