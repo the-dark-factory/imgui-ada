@@ -1,0 +1,10 @@
+20260611110348
+-c
+-x
+c++
+-O2
+-fno-exceptions
+-fno-rtti
+-I/Users/tony/dev/imgui-ada/vendor/cimgui
+-I/Users/tony/dev/imgui-ada/vendor/cimgui/imgui
+-DIMGUI_IMPL_API=extern "C"

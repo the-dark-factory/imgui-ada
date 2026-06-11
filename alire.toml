@@ -9,16 +9,10 @@ website = "https://github.com/the-dark-factory/imgui-ada"
 tags = ["binding", "gui", "imgui", "cimgui"]
 project-files = ["df_imgui.gpr"]
 auto-gpr-with = false
+notes = "cimgui + the Dear ImGui C++ it wraps are compiled by gprbuild via the companion cimgui.gpr (which df_imgui.gpr withs), so `alr build` is self-contained — no pre-build step, and consumers link the C++ library + runtime automatically. macOS: set SDKROOT if the toolchain needs the SDK headers."
 
 [build-switches]
 "*".style_checks = ["-gnaty"]
-
-#  cimgui (the C++ side) is currently vendored under vendor/cimgui
-#  and built by scripts/build-cimgui.sh. Until that build step is
-#  expressed as an Alire action or the C++ library is packaged as
-#  a separate crate, downstream users must run
-#  `./scripts/build-cimgui.sh` once before `alr build`. Documented
-#  in README.
 
 [available.'case(os)']
 macos = true

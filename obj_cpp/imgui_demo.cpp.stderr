@@ -1,0 +1,202 @@
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowWidgetsPlotting()':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2179:20: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2179 |             sprintf(overlay, "avg %f", average);
+      |             ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:61,
+                 from /Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:140:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowWidgetsProgressBars()':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2229:16: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2229 |         sprintf(buf, "%d/%d", (int)(progress * 1753), 1753);
+      |         ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowWidgetsSelectables()':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2539:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2539 |                     sprintf(label, "Item %d", i);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2551:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2551 |                     sprintf(label, "Item %d", i);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2615:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2615 |                     sprintf(name, "(%.1f,%.1f)", alignment.x, alignment.y);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowWidgetsSelectionAndMultiSelect(ImGuiDemoWindowData*)':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2879:24: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2879 |                 sprintf(buf, "Object %d", n);
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2896:24: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2896 |                 sprintf(buf, "Object %d", n);
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2937:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2937 |                     sprintf(label, "Object %05d: %s", n, ExampleNames[n % IM_COUNTOF(ExampleNames)]);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:2977:32: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 2977 |                         sprintf(label, "Object %05d: %s", n, ExampleNames[n % IM_COUNTOF(ExampleNames)]);
+      |                         ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:3039:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3039 |                     sprintf(label, "Object %05u: %s", item_id, ExampleNames[item_id % IM_COUNTOF(ExampleNames)]);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:3105:32: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3105 |                         sprintf(label, "Object %05d: %s", n, ExampleNames[n % IM_COUNTOF(ExampleNames)]);
+      |                         ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:3147:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3147 |                     sprintf(label, "Item %d", n);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:3190:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3190 |                     sprintf(label, "Object %05d: %s", n, ExampleNames[n % IM_COUNTOF(ExampleNames)]);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:3475:32: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3475 |                         sprintf(label, "Object %05d: %s", item_id, item_category);
+      |                         ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:3549:36: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 3549 |                             sprintf(label, "Delete %d item(s)###DeleteSelected", selection.Size);
+      |                             ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowLayout()':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:4576:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 4576 |                     sprintf(buf, "%03d", i);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:5166:24: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 5166 |                 sprintf(num_buf, "%d", n);
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowPopups()':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:5596:20: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 5596 |             sprintf(buf, "Button: %s###Button", name); // ### operator override ID ignoring the preceding label
+      |             ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowTables()':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:6034:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 6034 |                     sprintf(buf, "Hello %d,%d", column, row);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:6276:32: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 6276 |                         sprintf(buf, "Hello %d,%d", column, row);
+      |                         ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:6424:24: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 6424 |                 sprintf(label, "Hello %d,%d", column, row);
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:7134:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 7134 |                     sprintf(buf, "Cell %d,%d", column, row);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:7340:20: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 7340 |             sprintf(buf, "Synced Table %d", n);
+      |             ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:7684:28: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 7684 |                     sprintf(label, "%04d", item->ID);
+      |                     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowColumns()':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:7795:20: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 7795 |             sprintf(label, "Item %d", n);
+      |             ~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:7817:20: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 7817 |             sprintf(label, "%04d", i);
+      |             ~~~~~~~^~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void DemoWindowInputs()':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:8197:24: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 8197 |                 sprintf(label, "Mouse cursor %d: %s", i, mouse_cursors_names[i]);
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void ShowExampleAppLayout(bool*)':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:9644:24: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+ 9644 |                 sprintf(label, "MyObject %d", i);
+      |                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In function 'void ShowExampleAppWindowTitles(bool*)':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:10244:12: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+10244 |     sprintf(buf, "Animated title %c %d###AnimatedTitle", "|/-\\"[(int)(ImGui::GetTime() / 0.25f) & 3], ImGui::GetFrameCount());
+      |     ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In member function 'void ExampleAppDocuments::DisplayDocContextMenu(MyDocument*)':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:10819:16: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+10819 |         sprintf(buf, "Save %s", doc->Name);
+      |         ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp: In member function 'void ExampleAssetsBrowser::Draw(const char*, bool*)':
+/Users/tony/dev/imgui-ada/vendor/cimgui/imgui/imgui_demo.cpp:11455:40: warning: 'int sprintf(char*, const char*, ...)' is deprecated: This function is provided for compatibility reasons only.  Due to security concerns inherent in the design of sprintf(3), it is highly recommended that you use snprintf(3) instead. [-Wdeprecated-declarations]
+11455 |                                 sprintf(label, "%d", item_data->ID);
+      |                                 ~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h:280:10: note: declared here
+  280 | int      sprintf(char * __restrict _LIBC_UNSAFE_INDEXABLE, const char * __restrict, ...) __printflike(2, 3) _LIBC_PTRCHECK_REPLACED(snprintf);
+      |          ^~~~~~~
+clang: warning: overriding deployment version from '16.0' to '26.0' [-Woverriding-deployment-version]

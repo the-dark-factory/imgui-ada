@@ -1,0 +1,32 @@
+--  Standalone C++ sub-library: cimgui + the Dear ImGui C++ it wraps.
+--
+--  Kept a SEPARATE project from the Ada binding because Dear ImGui's
+--  imgui.cpp and the Ada root package (imgui.ads) would otherwise share an
+--  object-file name within one project. df_imgui.gpr `with`s this project, so
+--  a consumer that `with`s df_imgui links this C++ library automatically.
+--
+--  Only the six library translation units are compiled; the backend impl
+--  (cimgui_impl.cpp), generator, examples and tests in the vendored tree are
+--  excluded (the impl backends pull in GLFW/OpenGL we do not bind).
+library project Cimgui is
+
+   for Languages use ("C++");
+   for Source_Dirs use ("vendor/cimgui", "vendor/cimgui/imgui");
+   for Excluded_Source_Files use ("cimgui_impl.cpp");
+   for Object_Dir use "obj_cpp";
+   for Library_Dir use "lib_cpp";
+   for Library_Name use "cimgui_bundled";
+   for Library_Kind use "static";
+
+   package Compiler is
+      --  cimgui builds with exceptions + RTTI off and the C API exported as
+      --  extern "C". Headers are vendored; no SDK/sysroot is hardcoded (macOS:
+      --  set SDKROOT/CPATH if the toolchain needs the SDK headers).
+      for Switches ("C++") use
+        ("-O2", "-fno-exceptions", "-fno-rtti",
+         "-I" & Project'Project_Dir & "vendor/cimgui",
+         "-I" & Project'Project_Dir & "vendor/cimgui/imgui",
+         "-DIMGUI_IMPL_API=extern ""C""");
+   end Compiler;
+
+end Cimgui;

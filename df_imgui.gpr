@@ -1,43 +1,39 @@
---  GPR project file for the imgui-ada bindings.
+--  Root GPR for the df_imgui bindings — standard Alire library project
+--  (the shape `alr init --lib` generates).
 --
---  This file compiles the Ada side of the binding. Linking to
---  libcimgui is the responsibility of the consuming crate (or
---  the example projects under examples/). v1 keeps the build
---  artefact a static library so the consumer decides how to
---  pull in the C library.
-
-library project Df_Imgui is
+--  The Ada binding (src/) is the library; the cimgui + Dear ImGui C++ it wraps
+--  is compiled by the companion cimgui.gpr (a separate project to avoid an
+--  imgui.ads / imgui.cpp object-name clash). Because this project `with`s
+--  cimgui.gpr, `alr build` compiles both and a consumer that `with`s df_imgui
+--  links the C++ library too — self-contained, no pre-build script, nothing
+--  platform-hardcoded.
+with "config/df_imgui_config.gpr";
+with "cimgui.gpr";
+project Df_Imgui is
 
    for Library_Name use "imgui_ada";
-   for Library_Kind use "static";
-   for Source_Dirs use ("src");
-   for Object_Dir use "obj";
+   for Library_Version use Project'Library_Name & ".so." & Df_Imgui_Config.Crate_Version;
+
+   for Source_Dirs use ("src/", "config/");
+   for Object_Dir use "obj/" & Df_Imgui_Config.Build_Profile;
+   for Create_Missing_Dirs use "True";
    for Library_Dir use "lib";
 
-   --  Pass these to anyone with-ing this project so the C++ side
-   --  links correctly. cimgui is built by scripts/build-cimgui.sh
-   --  into vendor/cimgui/libcimgui.a.
-   --
-   --  The -syslibroot is macOS-specific (the Alire-shipped gcc
-   --  needs to be told where the Xcode SDK lives). On Linux the
-   --  c++ runtime is found automatically; that branch isn't
-   --  active here yet but will be once cross-platform testing
-   --  lands.
-   package Linker is
-      for Linker_Options use
-        ("-L" & Project'Project_Dir & "vendor/cimgui",
-         "-lcimgui",
-         "-Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk",
-         "-lc++");
-   end Linker;
+   type Library_Type_Type is ("relocatable", "static", "static-pic");
+   Library_Type : Library_Type_Type :=
+     external ("DF_IMGUI_LIBRARY_TYPE", external ("LIBRARY_TYPE", "static"));
+   for Library_Kind use Library_Type;
 
    package Compiler is
-      for Default_Switches ("ada") use
-        ("-gnatwa",       --  all warnings
-         "-gnaty",        --  default style checks
-         "-gnatVa",       --  all validity checks
-         "-O0",
-         "-g");
+      for Default_Switches ("Ada") use Df_Imgui_Config.Ada_Compiler_Switches;
    end Compiler;
+
+   package Binder is
+      for Switches ("Ada") use ("-Es"); --  Symbolic traceback
+   end Binder;
+
+   package Install is
+      for Artifacts (".") use ("share");
+   end Install;
 
 end Df_Imgui;

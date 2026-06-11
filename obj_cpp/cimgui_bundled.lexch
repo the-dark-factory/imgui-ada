@@ -1,0 +1,15 @@
+[LIBRARY PATH]
+/Users/tony/dev/imgui-ada/lib_cpp/libcimgui_bundled.a
+[OBJECT FILES]
+/Users/tony/dev/imgui-ada/obj_cpp/cimgui.o
+20260611110344
+/Users/tony/dev/imgui-ada/obj_cpp/imgui.o
+20260611110348
+/Users/tony/dev/imgui-ada/obj_cpp/imgui_demo.o
+20260611110345
+/Users/tony/dev/imgui-ada/obj_cpp/imgui_draw.o
+20260611110345
+/Users/tony/dev/imgui-ada/obj_cpp/imgui_tables.o
+20260611110344
+/Users/tony/dev/imgui-ada/obj_cpp/imgui_widgets.o
+20260611110346
